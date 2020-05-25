@@ -1,8 +1,24 @@
-spring:
-  application:
-    name: demo
-
 server:
   port: 8080
   servlet:
     context-path: /service
+
+mybatis:
+  type-aliases-package: com.example.demo
+  mapper-locations: classpath:mapper/*.xml
+
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+
+
+
+

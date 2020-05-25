@@ -1,7 +1,9 @@
 package com.example.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -9,6 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 //并且指明包路径来扫描指定包下的所有类，因为默认情况下运行DemoApplication的main方法下的SpringApplication.run(DemoApplication.class, args);
 //只会扫描同级包或者同级以下包目录下的所有类
 @ComponentScan(value = "com.cy.boot")
+@MapperScan("com.example.demo")
 public class DemoApplication {
 
     public static void main(String[] args) {
