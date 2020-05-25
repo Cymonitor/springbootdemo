@@ -77,7 +77,6 @@
                 <includes>
                     <include>**/*.yml</include>
                     <include>**/*.properties</include>
-                    <include>mapper/*.xml</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>

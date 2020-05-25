@@ -20,7 +20,12 @@ public class LoginUserServiceImpl implements LoginUserService {
     private LoginUserDao loginUserDao;
 
     @Override
-    public List<LoginUser> getLogiUserLIst() {
-        return loginUserDao.getLoginUserList();
+    public List<LoginUser> getLoginUserList() {
+        return loginUserDao.queryLoginUserList();
+    }
+
+    @Override
+    public Long addLoginUser(LoginUser loginUser) {
+        return loginUserDao.insertUserInfo(loginUser);
     }
 }

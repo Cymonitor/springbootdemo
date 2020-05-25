@@ -4,8 +4,10 @@ server:
     context-path: /service
 
 mybatis:
-  type-aliases-package: com.example.demo
-  mapper-locations: classpath:mapper/*.xml
+    configuration:
+      map-underscore-to-camel-case: true  #启用数据库字段名称映射对象名称 下划线+小写  转 大写
+#  type-aliases-package: com.example.demo
+#  mapper-locations: classpath:mapper/*.xml
 
 spring:
   application:
@@ -15,7 +17,10 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource  #使用数据连接池，不配置将使用默认连接池
+    #重要：SpringBoot 2.0 开始推 HikariCP ，将默认的数据库连接池从 tomcat jdbc pool 改为了 hikari ，
+    #HikariCP 在性能和并发方面确实表现不俗（号称最快的连接池）。
+
 
 
 
