@@ -22,6 +22,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <lombok.version>1.16.20</lombok.version>
     </properties>
 
     <dependencies>
@@ -59,6 +60,28 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!--引入谷歌包-->
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0.1-jre</version>
+        </dependency>
+
+        <!--加入reids整合springboot>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!--引入lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
@@ -72,13 +95,17 @@
             </resource>
         </resources>-->
         <resources>
+            <!--这里添加需要编译的resource目录下的文件，filtering=false,表示不全部编译，即个性化编译
+            为true是即全部编译进去-->
             <resource>
                 <directory>src/main/resources</directory>
-                <includes>
+                <filtering>true</filtering>
+                <!--<includes>
                     <include>**/*.yml</include>
                     <include>**/*.properties</include>
+                    <include>**/mybaties/**</include>
                 </includes>
-                <filtering>false</filtering>
+                <filtering>false</filtering>-->
             </resource>
         </resources>
         <plugins>

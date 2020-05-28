@@ -18,16 +18,40 @@ public class LoginUserController {
     @Autowired
     LoginUserService loginUserService;
 
-    @RequestMapping(value = "list",method = RequestMethod.POST)
+    @RequestMapping(value = "list", method = RequestMethod.POST)
     @ResponseBody
-    public Object getLoginUsers(){
-        List<LoginUser> loginUserList=loginUserService.getLoginUserList();
+    public Object getLoginUsers() {
+        List<LoginUser> loginUserList = loginUserService.getLoginUserList();
         return loginUserList;
     }
 
-    @RequestMapping(value = "add",method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     @ResponseBody
-    public Object addUserInfo(LoginUser loginUser){
+    public Object addUserInfo(LoginUser loginUser) {
         return loginUserService.addLoginUser(loginUser);
+    }
+
+    /**
+     * 通过@InsertProvider 批量新增
+     * @param userName
+     * @return
+     */
+    @RequestMapping(value = "batchAdd", method = RequestMethod.POST)
+    @ResponseBody
+    public Object batchAdd(@RequestParam List<String> userName) {
+        loginUserService.batchAddLoginUser(userName);
+        return null;
+    }
+
+    /**
+     * 通过@Insert 批量新增
+     * @param userName
+     * @return
+     */
+    @RequestMapping(value = "batchAdd2", method = RequestMethod.POST)
+    @ResponseBody
+    public Object batchAdd2(@RequestParam List<String> userName) {
+        loginUserService.batchAddLoginUser2(userName);
+        return null;
     }
 }

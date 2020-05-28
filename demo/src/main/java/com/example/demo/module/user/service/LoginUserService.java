@@ -10,4 +10,8 @@ public interface LoginUserService {
     List<LoginUser> getLoginUserList();
 
     Long addLoginUser(LoginUser loginUser);
+
+    void batchAddLoginUser(List<String> names);
+
+    void batchAddLoginUser2(List<String> names);
 }

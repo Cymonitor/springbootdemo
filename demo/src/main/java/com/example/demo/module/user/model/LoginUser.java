@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class LoginUser {
 
-    private Long id;
+    private String id;
 
     private String username;
 
@@ -21,11 +21,11 @@ public class LoginUser {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")  //对内输入格式化
     private Date createTime;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
