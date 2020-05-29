@@ -11,4 +11,8 @@
         #{goods.id},#{goods.name},#{goods.price},#{goods.sort},#{goods.color}
         )
     </insert>
+
+    <select id="getGoods" parameterType="String" resultType="com.example.demo.module.goods.model.Goods">
+        select * from t_goods where name= #{name}
+    </select>
 </mapper>

@@ -26,4 +26,10 @@ public class GoodController {
         goods.setId(UUIDUtils.getUUIDRandom());
         goodsService.addGoodsInfo(goods);
     }
+
+    @RequestMapping(value = "info",method = RequestMethod.POST)
+    @ResponseBody
+    public Object getGoodsInfo(String name){
+        return goodsService.getGoods(name);
+    }
 }

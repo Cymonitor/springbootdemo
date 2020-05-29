@@ -20,4 +20,9 @@ public class GoodsServiceImpl implements GoodsService {
     public void addGoodsInfo(Goods goods) {
         goodsDao.insertGoods(goods);
     }
+
+    @Override
+    public Goods getGoods(String name) {
+        return goodsDao.getGoods(name);
+    }
 }
