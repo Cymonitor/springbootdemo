@@ -1,0 +1,12 @@
+
+#专门提供configuration配置类
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+
+com.cy.boot.runner.congiguration.TestConfiguration,\
+
+com.cy.boot.runner.congiguration.TestConfigurationA,\
+
+com.cy.boot.runner.congiguration.TestConfigurationB,\
+
+com.cy.boot.runner.congiguration.TestConfigurationC
