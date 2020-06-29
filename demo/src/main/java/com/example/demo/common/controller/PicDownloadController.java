@@ -105,7 +105,6 @@ public class PicDownloadController {
                 while ((read = in.read(bytes)) != -1) {
                     zipOutputStream.write(bytes, 0, read);
                 }
-
                 IOUtils.closeQuietly(inStream); // 关掉输入流
                 IOUtils.closeQuietly(in); // 关掉缓冲输入流
                 zipOutputStream.closeEntry();
