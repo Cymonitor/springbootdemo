@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="resources/css/common.css"/>
+    <script src="resources/js/entry.js"></script>
+    <script src="login.js"></script>
+    <title>登入界面</title>
+</head>
+<body class="login_body">
+<div class="tag-all">
+    <div class="login-div">
+        <h>欢迎进入异次元界面</h>
+    </div>
+    <div style="margin-top: 150px;">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label loginlabel">用户名:</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" id="username" autocomplete="off" class="layui-input"
+                               v-model="username">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label loginlabel">密码:</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="password" id="password" autocomplete="off" class="layui-input"
+                               v-model="password">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-inline" style="margin-left: 5%">
+                    <button type="reset" class="layui-btn layui-btn-login">重置</button>
+                    <button type="button" class="layui-btn layui-btn-login" @click="login()">登入</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

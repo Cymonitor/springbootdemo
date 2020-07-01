@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface LoginUserService {
 
-    List<LoginUser> getLoginUserList();
+    LoginUser getLoginUserByUserName(String userName);
 
     Long addLoginUser(LoginUser loginUser);
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>销售单简单列表</title>
+    <link rel="stylesheet" href="../resources/css/sale.css">
+    <script type="text/javascript" src="../resources/js/sale/flexible.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.jqpagination.js"></script>
+    <script src="../resources/js/entry.js"></script>
+</head>
+
+<body class="ui-bg-f0" id="saleInfos">
+<div class="home-top">
+    <section class="home-top-show">
+        <aside class="home-top-sub">
+            <p>查询销售单总记录数:</p>
+            <div class="home-top-val">{{saleCount}}</div>
+        </aside>
+        <aside class="home-top-sub">
+            <p>销售单为已收款数:</p>
+            <div class="home-top-val ui-co-org" v-text="gatherSaleCount"></div>
+        </aside>
+    </section>
+    <p class="ui-tc" v-text="timeRange"></p>
+    <div class="search-input">
+        <input type="text" placeholder="请输入销售的单号" id="saleNo"/>
+        <button class="search-btn" @click="querySaleInfo()"></button>
+    </div>
+</div>
+<section class="home-main" v-for="saleInfo in saleList">
+    <div class="home-main-sub">
+        <h3 class="home-main-tit">{{saleInfo.sale_no}}<span class="home-main-tit-mark"
+                                                            v-if="lotInfo.inspectStatus!=null"
+                                                            v-text="lotInfo.inspectStatus"></span></h3>
+        <p class="home-main-info justify-content"><label>单据状态:</label>
+            <span v-if="saleInfo.sale_status=='0'">未提交</span>
+            <span v-if="saleInfo.sale_status=='1'">审批中</span>
+            <span v-if="saleInfo.sale_status=='2'">审批不通过</span>
+            <span v-if="saleInfo.sale_status=='3'">审批通过</span>
+            <span v-if="saleInfo.sale_status=='4'">已结算</span>
+            <span v-if="saleInfo.sale_status=='5'">已取消</span>
+        </p>
+        <p class="home-main-info justify-content"><label>首付金额:</label><span>{{saleInfo.first_pay}}</span>
+        <p class="home-main-info justify-content"><label>结算日期:</label><span>{{saleInfo.settlement_date}}</span></p>
+    </div>
+</section>
+</body>
+</html>

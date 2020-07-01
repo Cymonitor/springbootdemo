@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>车辆车型信息</title>
+    <script src="../resources/js/entry.js"></script>
+</head>
+<body>
+<div id="OffcialAtcManagerMain">
+    <h3 class="common-box-tit"></h3>
+    <div class="common-right-centain">
+        <div class="layui-row">
+            <form class="layui-form" @submit.prevent="search">
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">车型名称：</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="modelName" autocomplete="off" class="layui-input"
+                                   v-model="queryParam.modelName">
+                        </div>
+                        <label class="layui-form-label">创建时间:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="startTime" id="startTime" lay-verify="date" placeholder="请选择开始日期"
+                                   autocomplete="off" class="layui-input" v-model="queryParam.startTime">
+                        </div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="endTime" id="endTime" lay-verify="date" placeholder="请选择结束日期"
+                                   autocomplete="off" class="layui-input" v-model="queryParam.endTime">
+                        </div>
+                        <button class="layui-btn layui-btn-warm" lay-filter="search">查询</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <table class="layui-table" :lay-data="gridConfig" lay-filter="offcialSendGrid" id="offcialSendGrid">
+        <thead>
+        <tr>
+            <th lay-data="{sort:true,field:'model_name',width:500,align:'center'}">车型名称</th>
+            <th lay-data="{sort:true,field:'brand_name', width:250,align:'center'}">品牌</th>
+            <th lay-data="{sort:true,field:'qa', width:300,align:'center'}">使用年限或最大行驶里程</th>
+            <th lay-data="{sort:true,field:'create_time', width:450,align:'center'}">创建时间</th>
+            <!-- <th lay-data="{width:300, align:'center', toolbar: '#barOperate'}">操作</th>-->
+        </tr>
+        </thead>
+    </table>
+</div>
+<!--<script type="text/html" id="barOperate">
+    <a class="common-btn" lay-event="preview">预览</a>
+    <a class="common-btn" lay-event="sendmessage">发送消息</a>
+</script>-->
+</body>
+</html>

@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface LoginUserDao {
 
-    @Select("select * from t_user")
-    List<LoginUser> queryLoginUserList();
+    @Select("select * from t_user where username=#{userName}#")
+    LoginUser queryLoginUserByUserName(String userName);
 
     @Insert("insert into t_user values (replace(UUID(),'-',''),#{username},#{password},now())")
     Long insertUserInfo(LoginUser loginUser);

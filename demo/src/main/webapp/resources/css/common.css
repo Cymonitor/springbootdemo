@@ -1,0 +1,565 @@
+.ui-col-green {
+    color: #009688;
+}
+
+.ui-col-red {
+    color: #FF5722;
+}
+
+.ui-hand {
+    cursor: pointer;
+}
+
+.layui-body {
+    overflow: hidden;
+}
+
+.layui-layout-admin .layui-body {
+    bottom: 0;
+    height: 100%;
+}
+
+.layui-body > .layui-tab {
+    height: 100%;
+}
+
+.layui-tab-content.common-full .layui-tab-item iframe {
+    width: 100%;
+    border: 0;
+    height: 100%;
+}
+
+.layui-layout-body.overflow-auto {
+    overflow: auto;
+    margin: 10px;
+}
+
+.layui-layout-body.overflow-auto .layui-form {
+    padding-bottom: 1px;
+}
+
+.layui-tab-content.common-full {
+    padding: 0;
+}
+
+.layui-tab-content.common-full .layui-tab-item {
+    height: 100%;
+}
+
+.circular {
+    width: 150px;
+    height: 150px;
+    animation: loading-rotate 2s linear infinite;
+}
+
+.circular .path {
+    animation: loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: #40AFFE;
+    stroke-linecap: round;
+}
+
+@keyframes loading-rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -40px
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -120px
+    }
+}
+
+.common-nav {
+    display: none;
+}
+
+.common-nav .layui-nav {
+    padding: 0;
+}
+
+.common-nav .layui-nav .layui-nav-item {
+    line-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .layui-side.layui-bg-black {
+        display: none;
+    }
+
+    .layui-layout-admin .layui-body {
+        left: 0;
+        top: 101px;
+    }
+
+    .common-nav {
+        display: block;
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    color: #c2c2c2;
+    font-size: 18px;
+}
+
+.logo:hover {
+    color: #fff18a;
+}
+
+.logo img {
+    width: 82px;
+    height: 31px;
+}
+
+.header {
+    height: 60px;
+    border-bottom: none;
+}
+
+.header .layui-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    background: none;
+}
+
+.header .layui-nav .layui-nav-item {
+    margin: 0 20px;
+}
+
+.header .layui-nav .layui-nav-item[mobile] {
+    display: none;
+}
+
+.layui-nav-item a i {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.layui-body > .layui-tab {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.common-full {
+    flex: 1;
+}
+
+.common-body .layui-tab-title {
+    border-bottom-color: #009688;
+}
+
+.layui-tab-title .layui-this:after {
+    border: none;
+}
+
+.common-body .layui-tab-title .layui-this {
+    color: #fff;
+    background-color: #009688;
+}
+
+.common-body .layui-tab-title li.layui-this .layui-tab-close {
+    color: #fff;
+}
+
+.layui-table-fixed-l tr {
+    text-align: center;
+}
+
+.common-tree {
+    border: 1px solid #e6e6e6;
+    padding: 5px;
+}
+
+.common-body .layui-tree li i.layui-tree-spread, .common-body .layui-tree li i.layui-tree-branch {
+    color: #888;
+}
+
+.common-body .layui-tree .layui-form-checkbox {
+    margin-top: 0;
+}
+
+.common-body .layui-tree .layui-form-checkbox[lay-skin=primary]:hover i {
+    color: #009688;
+}
+
+.common-body .layui-tree .layui-form-checkbox i {
+    padding-left: 0;
+}
+
+.common-hflex {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.common-fige {
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+.common-hleft {
+    padding: 10px;
+    background: #ECEFF1;
+    text-align: center;
+    padding-left: 30px;
+    line-height: 30px;
+}
+
+.common-hleft h3 {
+    font-size: 20px;
+    padding: 18px 0 10px;
+}
+
+.common-cos {
+    padding: 20px;
+    line-height: 30px;
+}
+
+.common-cos span {
+    display: inline-block;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+.common-hbottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.common-parking {
+    margin: 20px 0;
+}
+
+.common-hbottom .layui-btn {
+    flex: 1;
+    border-radius: 0;
+    min-width: 150px;
+    background: #B3E5FC;
+    color: #333;
+}
+
+.common-hbottom .layui-btn:nth-child(even) {
+    background: #81D4FA;
+}
+
+.common-hbottom .layui-btn + .layui-btn {
+    margin: 0;
+}
+
+.common-detection {
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 5px 0 #e2e2e2;
+}
+
+.common-det-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+}
+
+.common-det-ico {
+    height: 150px;
+    margin: 30px;
+    flex: 1;
+    text-align: center;
+}
+
+.common-det-head .layui-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.common-det-tit {
+    font-size: 30px;
+    flex: 1;
+}
+
+.common-stap {
+    padding: 20px;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+.common-stap-head {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.common-stap > p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.common-right-centain {
+    padding-top: 10px;
+    font-size: 16px;
+    position: relative;
+}
+
+.layui-tab-item + .layui-tab-item .circular .path {
+    stroke: #FF5722;
+}
+
+.layui-tab-item + .layui-tab-item .common-stap > * > span {
+    flex: 1;
+    text-align: center;
+}
+
+.common-up-block {
+    margin: 20px 0;
+    border: 1px solid #e5e5e5;
+}
+
+.common-up-sok {
+    padding: 20px;
+    background-color: #E3F2FD;
+}
+
+.common-up-block:nth-child(even) .common-up-sok {
+    background-color: #f2f2f2;
+}
+
+.common-up-tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.common-box-tit {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.common-up-tit > h3 {
+    font-size: 20px;
+}
+
+.common-up-nak {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.common-up-nak span {
+    display: block;
+}
+
+.common-up-nak .layui-icon {
+    color: #666;
+    margin-left: 5px;
+    transition: all .5s;
+    display: inline-block;
+}
+
+.active .layui-icon {
+    transform: rotate(180deg)
+}
+
+.common-up-nak > .layui-btn {
+    padding: 0 38px;
+}
+
+.common-up-tip {
+    line-height: 40px;
+    padding: 0 20px;
+    display: none;
+    overflow: hidden;
+}
+
+.common-up-tip span {
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.common-up-alert {
+    padding: 20px;
+    line-height: 30px;
+}
+
+.common-up-alert > p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.common-detail-head {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.common-detail-head > span {
+    cursor: pointer;
+    color: #40AFFE;
+    margin-left: 30px;
+}
+
+.common-detail-lst {
+    margin: 20px 0;
+}
+
+.common-detail-lst h2 {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.layui-polling {
+    width: 660px;
+    overflow: hidden;
+}
+
+.layui-polling .layui-polling-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.layui-polling .layui-polling-title {
+    font-size: 16px;
+    color: #111;
+    position: relative;
+    height: 42px;
+    border-bottom: solid 1px #e8e8e8;
+    line-height: 42px;
+    padding: 0 15px 0 35px;
+    color: #333;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.layui-polling .layui-polling-content {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #777777;
+    line-height: 1.6;
+    display: none;
+}
+
+.layui-polling .layui-polling-content {
+    border: none;
+}
+
+.layui-polling .layui-polling-content p span {
+    padding-left: 55px;
+}
+
+.layui-polling .layui-polling-content .cor-b {
+    color: #1b1d1d
+}
+
+.layui-polling .layui-polling-content .p815 {
+    padding-bottom: 8px;
+    padding-left: 15px;
+}
+
+.layui-polling .layui-polling-content .pl15 {
+    padding-left: 15px;
+}
+
+.layui-polling .layui-polling-content .p815 .col-gre {
+    color: #29d6bc !important;
+}
+
+.layui-polling .layui-polling-content .p815 .col-red {
+    color: red !important;
+}
+
+.login_body {
+    background: url(../images/loginImages/bg.jpg) no-repeat center;
+    background-size: 100% 100%;;
+}
+
+.tag-all {
+    text-align: center;
+}
+
+.layui-btn-login {
+    background-color: #81D4FA;
+    width: 80px;
+    height: 38px
+}
+
+.login-div {
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 20px;
+    color: lightyellow /*FF*/;
+    text-shadow: 0 0 1px currentColor,
+    2px 0 1px #98c0e8, 0 2px 1px #083058, 2px 1px 1px #98c0e8, 1px 2px 1px #083058, 2px 2px 1px #487098,
+    3px 1px 1px #98c0e8, 1px 3px 1px #083058, 3px 2px 1px #98c0e8, 2px 3px 1px #083058, 3px 3px 1px #487098,
+    4px 2px 1px #98c0e8, 2px 4px 1px #083058, 4px 3px 1px #98c0e8, 3px 4px 1px #083058, 4px 4px 1px #487098,
+    5px 3px 1px #98c0e8, 3px 5px 1px #083058, 5px 4px 1px #98c0e8, 4px 5px 1px #083058, 5px 5px 1px #487098,
+    6px 4px 1px #98c0e8, 4px 6px 1px #083058, 6px 5px 1px #98c0e8, 5px 6px 1px #083058, 6px 6px 1px #487098,
+    7px 5px 1px #98c0e8, 5px 7px 1px #083058, 7px 6px 1px #98c0e8, 6px 7px 1px #083058, 7px 7px 1px #487098,
+    8px 6px 1px #98c0e8, 6px 8px 1px #083058, 8px 7px 1px #98c0e8, 7px 8px 1px #083058, 8px 8px 1px #487098,
+    9px 7px 1px #98c0e8, 7px 9px 1px #083058, 9px 8px 1px #98c0e8, 8px 9px 1px #083058, 9px 9px 1px #487098,
+    10px 8px 1px #98c0e8, 8px 10px 1px #083058, 10px 9px 1px #98c0e8, 9px 10px 1px #083058, 10px 10px 1px #487098,
+    11px 9px 1px #98c0e8, 9px 11px 1px #083058, 11px 10px 1px #98c0e8, 10px 11px 1px #083058, 11px 11px 1px #487098,
+    2px -1px 1px #666,
+    3px 0 1px #666,
+    4px 1px 1px #666,
+    5px 2px 1px #666,
+    6px 3px 1px #666,
+    7px 4px 1px #666,
+    8px 5px 1px #666,
+    9px 6px 1px #666,
+    10px 7px 1px #666,
+    11px 8px 1px #666,
+    12px 9px 1px #666,
+    12px 10px 1px #666,
+    11px 11px 1px #666
+}
+
+.loginlabel {
+    color: aqua;
+    font-size: 20px;
+    text-shadow: 0 0 2px currentColor,
+    0 -1px 1px hsl(40, 100%, 80%),
+    -1px -1px 1px hsl(10, 100%, 40%),
+    1px -1px 1px hsl(10, 100%, 40%),
+    1px 0 1px hsl(10, 100%, 40%),
+    0 -1px 1px hsl(10, 100%, 40%),
+    0 1px 1px hsl(10, 100%, 20%),
+    1px 1px 1px hsl(10, 100%, 40%),
+    -1px 1px 1px hsl(10, 100%, 40%),
+    -2px -2px 1px hsl(10, 100%, 20%),
+    -1px -2px 1px hsl(10, 100%, 20%),
+    0 -2px 1px hsl(10, 100%, 20%),
+    1px -2px 1px hsl(10, 100%, 20%),
+    2px -2px 1px hsl(10, 100%, 20%),
+    2px -1px 1px hsl(10, 100%, 20%),
+    2px 0 1px hsl(10, 100%, 20%),
+    2px 1px 1px hsl(10, 100%, 20%),
+    2px 2px 1px hsl(10, 100%, 20%),
+    1px 2px 1px hsl(10, 100%, 20%),
+    0 2px 3px hsl(10, 100%, 20%),
+    -1px 2px 1px hsl(10, 100%, 20%),
+    -2px 2px 1px hsl(10, 100%, 20%),
+    -2px 1px 1px hsl(10, 100%, 20%),
+    -2px 0 1px hsl(10, 100%, 20%),
+    -2px -1px 1px hsl(10, 100%, 20%)
+}

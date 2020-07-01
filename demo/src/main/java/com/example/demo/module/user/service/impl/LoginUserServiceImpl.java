@@ -22,8 +22,8 @@ public class LoginUserServiceImpl implements LoginUserService {
     private LoginUserDao loginUserDao;
 
     @Override
-    public List<LoginUser> getLoginUserList() {
-        return loginUserDao.queryLoginUserList();
+    public LoginUser getLoginUserByUserName(String userName) {
+        return loginUserDao.queryLoginUserByUserName(userName);
     }
 
     @Override

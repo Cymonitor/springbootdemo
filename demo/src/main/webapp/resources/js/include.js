@@ -1,0 +1,10 @@
+importJS("layui/layui.js");
+importJS("common/vue.min.js");
+importJS("common/jquery.min.js");
+importJS("common/async.1.5.2.min.js");
+importJS("common/spin.min.js");
+importJS("common/spin_waiting.js");
+importJS('common/supersized.3.2.7.min.js');
+importJS("api.js");
+importCSS("layui/layui.css");
+importCSS("common.css");
