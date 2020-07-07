@@ -3,6 +3,7 @@ package com.example.demo.module.goods.controller;
 import com.example.demo.module.goods.model.Goods;
 import com.example.demo.module.goods.service.GoodsService;
 import com.example.demo.module.utils.UUIDUtils;
+import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
