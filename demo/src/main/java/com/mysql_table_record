@@ -34,5 +34,14 @@ CREATE TABLE `t_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
+CREATE TABLE `t_permission` (
+  `id` char(32) NOT NULL,
+  `permission_name` varchar(50) DEFAULT NULL COMMENT '权限名称',
+  `role_id` char(32) DEFAULT NULL COMMENT '角色Id',
+  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限表';
+
+
 
 

@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Arrays;
@@ -242,11 +239,11 @@ public class PicDownloadController {
                 // 压缩条目不是具体独立的文件，而是压缩包文件列表中的列表项，称为条目，就像索引一样
                 //ZipEntry zipEntry = new ZipEntry("文件夹/" + imageName);
 
-                ZipEntry zipEntry = new ZipEntry("CK/"+picName);
+                ZipEntry zipEntry = new ZipEntry("CK"+File.separator +picName);
                 // 定位到该压缩条目位置，开始写入文件到压缩包中
                 zipOutputStream.putNextEntry(zipEntry);
 
-                byte[] bytes = new byte[1024 * 5]; // 读写缓冲区(每张图片限定5M以内)
+                byte[] bytes = new byte[1024 * 10]; // 读写缓冲区(每张图片限定10M以内)
                 int read = 0;
                 while ((read = in.read(bytes)) != -1) {
                     zipOutputStream.write(bytes, 0, read);
